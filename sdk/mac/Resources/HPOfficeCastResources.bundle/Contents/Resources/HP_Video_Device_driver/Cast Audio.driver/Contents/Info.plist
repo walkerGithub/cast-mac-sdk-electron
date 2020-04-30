@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AudioServerPlugIn_MachServices</key>
+	<array>
+		<string>com.bearisdriving.BGM.XPCHelper</string>
+	</array>
+	<key>BuildMachineOSBuild</key>
+	<string>18F132</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>Cast Audio</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.hpplay.CastAudio.Driver</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Cast Audio</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.3.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1.0.0</string>
+	<key>CFPlugInFactories</key>
+	<dict>
+		<key>C957AD43-DACA-4A40-8850-3BA8CE28FAF9</key>
+		<string>BGM_Create</string>
+	</dict>
+	<key>CFPlugInTypes</key>
+	<dict>
+		<key>443ABAB8-E7B3-491A-B985-BEB9187030DB</key>
+		<array>
+			<string>C957AD43-DACA-4A40-8850-3BA8CE28FAF9</string>
+		</array>
+	</dict>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>10E1001</string>
+	<key>DTPlatformVersion</key>
+	<string>GM</string>
+	<key>DTSDKBuild</key>
+	<string>18E219</string>
+	<key>DTSDKName</key>
+	<string>macosx10.14</string>
+	<key>DTXcode</key>
+	<string>1020</string>
+	<key>DTXcodeBuild</key>
+	<string>10E1001</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2016-2018 Background Music contributors</string>
+</dict>
+</plist>

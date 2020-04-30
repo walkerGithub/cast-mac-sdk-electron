@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+const { app, BrowserWindow, nativeTheme } = require('electron');
+const CASTSDKMOD = require('../lib/cast_sdk.js');
+const os = require('os');
+const platform = os.platform();
+
+
+if (platform == 'darwin' && nativeTheme) {
+  nativeTheme.themeSource = 'light';
+}
+//node加载路径
+const node_path = './../sdk/mac/castsdk.node';
+// 获取cast_nodejs_SDK
+const castsdk = CASTSDKMOD.CastSDK.getInstance(node_path);
+// 回调接口
+function callBack(type, success, errType,param) {
+    //在这里处理所有回调事件
+    console.log('callBack call',type,success,errType,param);
+}
+// 设置C++回调JS接口，
+ret = castsdk.SetCallback(callBack);
+console.log('castsdk SetCallback', castsdk,"ret",ret);
+
+    function lbcastStart() {
+        // 获取服务器地址
+        const serverIp = document.getElementById("serverIp").value;
+        if (!serverIp) {
+            alert('请输入服务器地址')
+            return;
+        }
+        // 获取服务器端口
+        const serverPort = document.getElementById("serverPort").value;
+        const serverPortInt = parseInt(serverPort);
+        if (!serverPortInt) {
+           alert('请输入服务器端口')
+           return;
+        }
+        // 服务器部署是否https请求
+        const isServerHttps = document.getElementById("serverHttps").checked;
+
+        // 初始化 输入参数分别为：appkey(乐播提供的key)/userid（员工id）/userid（员工部门）/pinserver（pin码服务器）/pinserverport（pin码服务器端口）/https开关（服务器是否https）/logbool日志开关。空字符填写"",不可填写NULL，null
+        //appkey需乐播商务咨询(demo key，com.github.Electron.helper:011e99a33c4cd35545baf6c896e9916f  com.electron.castsdkapp.helper:b9e37bc1de5cb0236e9a924c57a7cc95)
+        var ret = castsdk.InitSDK("011e99a33c4cd35545baf6c896e9916f","工号0001","研发一部",serverIp,serverPortInt,isServerHttps,true);
+        console.log('castsdk InitSDK end', castsdk,"ret",ret);
+        
+        // 设置log输出方式，0:终端输出，1:代理方法输出 2:文件保存
+        castsdk.SetProperty("logOutputStyle",2);
+        
+        // 设置是否开启系统投屏
+        const isSystemCast = document.getElementById("lbSystemCastCheckbox").checked;
+        castsdk.SetProperty("enableSystemCast",isSystemCast);
+
+        // 获取输入投屏码
+        const pin = document.getElementById("pin").value;
+        if (!pin) {
+            alert('请输入投屏码')
+            return;
+        }
+        // 开始投屏，pin：投屏码
+        var ret = castsdk.StartCast(pin);
+    }
+    function lbcastEnd() {
+        // 结束投屏
+        var ret = castsdk.StopCast();
+        // 获取投屏状态
+        var isCasting = castsdk.GetProperty("isCasting");
+        console.log('isCasting',isCasting);
+
+    }
+    function getIsSupportCastSystemSound() {
+        // 获取是否已安装声卡插件
+        var ret = castsdk.GetIsSupportCastSystemSound();
+        
+        console.log('castsdk getIsSupportCastSystemSound ret',ret);
+    }
+    function lbinstallAudioDriver() {
+        // 在未安装声卡插件情况下，安装声卡插件
+        var ret = castsdk.InstallAudioDriver();
+        
+        console.log('castsdk InstallAudioDriver ret',ret);
+    }
+    function lbuninstallAudioDriver() {
+        // 卸载声卡插件
+        var ret = castsdk.UninstallAudioDriver();
+        
+        console.log('castsdk UninstallAudioDriver ret',ret);
+    }
+    function canRecordScreen() {
+        // 获取录制屏幕系统权限
+        var ret = castsdk.SystemAuthorize("canRecordScreen");
+        
+        console.log('castsdk canRecordScreen','ret',ret);
+    }
+    function openSystemSettingRecordScreenAuthorize() {
+        // 打开系统设置录制屏幕授权
+        var ret = castsdk.SystemAuthorize("openSystemSettingRecordScreenAuthorize");
+        
+        console.log('castsdk openSystemSettingRecordScreenAuthorize','ret',ret);
+    }
+    function canRecordAudio() {
+        //获取录制系统声音权限
+        var ret = castsdk.SystemAuthorize("canRecordAudio");
+        
+        console.log('castsdk canRecordAudio','ret',ret);
+    }
+    function openSystemSettingRecordAudioAuthorize() {
+        //打开系统设置录制声音授权
+        var ret = castsdk.SystemAuthorize("openSystemSettingRecordAudioAuthorize");
+        
+        console.log('castsdk openSystemSettingRecordAudioAuthorize','ret',ret);
+    }
+
+
+</script>
+<p>投屏功能</p>
+<input id="pin" value="" placeholder="输入6位投屏码">
+<input id="lbcastBtn" type="button" value="开始投屏" onclick="lbcastStart()"/>
+<input id="lbendcastBtn" type="button" value="结束投屏" onclick="lbcastEnd()"/>
+<input id="lbSystemCastCheckbox" type="checkbox"/>启动系统投屏
+<hr />
+<p>初始化设置</p>
+<input id="serverIp" value="192.168.8.230" placeholder="输入服务器ip或域名">
+<input id="serverPort" value=8000 placeholder="输入服务器端口">
+<input id="serverHttps" type="checkbox"/>是否https
+<input id="getIsSupportCastSystemSound" type="button" value="获取是否已安装声音插件" onclick="getIsSupportCastSystemSound()"/>
+<input id="installAudioDriver" type="button" value="安装声音插件" onclick="lbinstallAudioDriver()"/>
+<input id="uninstallAudioDriver" type="button" value="卸载声音插件" onclick="lbuninstallAudioDriver()"/>
+<input id="canRecordScreen" type="button" value="获取录制屏幕系统权限" onclick="canRecordScreen()"/>
+<input id="openSystemSettingRecordScreenAuthorize" type="button" value="打开系统设置录制屏幕授权" onclick="openSystemSettingRecordScreenAuthorize()"/>
+<input id="canRecordAudio" type="button" value="获取录制系统声音权限" onclick="canRecordAudio()"/>
+<input id="openSystemSettingRecordAudioAuthorize" type="button" value="打开系统设置录制声音授权" onclick="openSystemSettingRecordAudioAuthorize()"/>
+</html>

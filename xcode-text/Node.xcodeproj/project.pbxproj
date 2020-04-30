@@ -1,0 +1,400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11D79BE9244F3425000BFAEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D79BE8244F3425000BFAEF /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		11D79BBB244ED58F000BFAEF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1143CCE224540D7A006B1937 /* build_app_mac.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = build_app_mac.sh; path = ../build_app_mac.sh; sourceTree = "<group>"; };
+		11D79BBD244ED58F000BFAEF /* Node */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Node; sourceTree = BUILT_PRODUCTS_DIR; };
+		11D79BC9244ED5AE000BFAEF /* cast_node_bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cast_node_bridge.h; sourceTree = "<group>"; };
+		11D79BCA244ED5AE000BFAEF /* cast_node_bridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = cast_node_bridge.mm; sourceTree = "<group>"; };
+		11D79BCB244ED5AE000BFAEF /* cast_node_addon.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cast_node_addon.cc; sourceTree = "<group>"; };
+		11D79BCC244ED5AE000BFAEF /* cast_sdk.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = cast_sdk.js; sourceTree = "<group>"; };
+		11D79BCE244ED6A8000BFAEF /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		11D79BCF244ED6A8000BFAEF /* main.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
+		11D79BD0244ED6A8000BFAEF /* package.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+		11D79BD1244ED6BE000BFAEF /* binding.gyp */ = {isa = PBXFileReference; lastKnownFileType = text; name = binding.gyp; path = ../binding.gyp; sourceTree = "<group>"; };
+		11D79BD6244ED85C000BFAEF /* castsdk.node.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = castsdk.node.dSYM; sourceTree = "<group>"; };
+		11D79BD7244ED85C000BFAEF /* castsdk.node */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = castsdk.node; sourceTree = "<group>"; };
+		11D79BD9244ED85C000BFAEF /* HPOfficeCastResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HPOfficeCastResources.bundle; sourceTree = "<group>"; };
+		11D79BDA244ED85C000BFAEF /* HPOfficeCastWork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HPOfficeCastWork.framework; sourceTree = "<group>"; };
+		11D79BDF244EF86C000BFAEF /* build_nodeaddon_mac.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = build_nodeaddon_mac.sh; path = ../build_nodeaddon_mac.sh; sourceTree = "<group>"; };
+		11D79BE0244EF872000BFAEF /* run_demo_mac.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = run_demo_mac.sh; path = ../run_demo_mac.sh; sourceTree = "<group>"; };
+		11D79BE8244F3425000BFAEF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11D79BBA244ED58F000BFAEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11D79BB4244ED58F000BFAEF = {
+			isa = PBXGroup;
+			children = (
+				11D79BDF244EF86C000BFAEF /* build_nodeaddon_mac.sh */,
+				11D79BD1244ED6BE000BFAEF /* binding.gyp */,
+				11D79BE0244EF872000BFAEF /* run_demo_mac.sh */,
+				1143CCE224540D7A006B1937 /* build_app_mac.sh */,
+				11D79BE7244F3425000BFAEF /* Node */,
+				11D79BCD244ED6A8000BFAEF /* demo */,
+				11D79BC7244ED5AE000BFAEF /* lib */,
+				11D79BD2244ED85C000BFAEF /* sdk */,
+				11D79BBE244ED58F000BFAEF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		11D79BBE244ED58F000BFAEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11D79BBD244ED58F000BFAEF /* Node */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11D79BC7244ED5AE000BFAEF /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				11D79BCC244ED5AE000BFAEF /* cast_sdk.js */,
+				11D79BC8244ED5AE000BFAEF /* node_add_on */,
+			);
+			name = lib;
+			path = ../lib;
+			sourceTree = "<group>";
+		};
+		11D79BC8244ED5AE000BFAEF /* node_add_on */ = {
+			isa = PBXGroup;
+			children = (
+				11D79BCB244ED5AE000BFAEF /* cast_node_addon.cc */,
+				11D79BC9244ED5AE000BFAEF /* cast_node_bridge.h */,
+				11D79BCA244ED5AE000BFAEF /* cast_node_bridge.mm */,
+			);
+			path = node_add_on;
+			sourceTree = "<group>";
+		};
+		11D79BCD244ED6A8000BFAEF /* demo */ = {
+			isa = PBXGroup;
+			children = (
+				11D79BCE244ED6A8000BFAEF /* index.html */,
+				11D79BCF244ED6A8000BFAEF /* main.js */,
+				11D79BD0244ED6A8000BFAEF /* package.json */,
+			);
+			name = demo;
+			path = ../demo;
+			sourceTree = "<group>";
+		};
+		11D79BD2244ED85C000BFAEF /* sdk */ = {
+			isa = PBXGroup;
+			children = (
+				11D79BD3244ED85C000BFAEF /* mac */,
+			);
+			name = sdk;
+			path = ../sdk;
+			sourceTree = "<group>";
+		};
+		11D79BD3244ED85C000BFAEF /* mac */ = {
+			isa = PBXGroup;
+			children = (
+				11D79BD4244ED85C000BFAEF /* Plugins */,
+				11D79BD5244ED85C000BFAEF /* Resources */,
+				11D79BD6244ED85C000BFAEF /* castsdk.node.dSYM */,
+				11D79BD7244ED85C000BFAEF /* castsdk.node */,
+				11D79BD8244ED85C000BFAEF /* CastSDK */,
+			);
+			path = mac;
+			sourceTree = "<group>";
+		};
+		11D79BD4244ED85C000BFAEF /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		11D79BD5244ED85C000BFAEF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		11D79BD8244ED85C000BFAEF /* CastSDK */ = {
+			isa = PBXGroup;
+			children = (
+				11D79BD9244ED85C000BFAEF /* HPOfficeCastResources.bundle */,
+				11D79BDA244ED85C000BFAEF /* HPOfficeCastWork.framework */,
+			);
+			path = CastSDK;
+			sourceTree = "<group>";
+		};
+		11D79BE7244F3425000BFAEF /* Node */ = {
+			isa = PBXGroup;
+			children = (
+				11D79BE8244F3425000BFAEF /* main.m */,
+			);
+			path = Node;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		11D79BBC244ED58F000BFAEF /* Node */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11D79BC4244ED58F000BFAEF /* Build configuration list for PBXNativeTarget "Node" */;
+			buildPhases = (
+				11D79BB9244ED58F000BFAEF /* Sources */,
+				11D79BBA244ED58F000BFAEF /* Frameworks */,
+				11D79BBB244ED58F000BFAEF /* CopyFiles */,
+				1175357124531434007B135F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Node;
+			productName = Node;
+			productReference = 11D79BBD244ED58F000BFAEF /* Node */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		11D79BB5244ED58F000BFAEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = wangzhijun;
+				TargetAttributes = {
+					11D79BBC244ED58F000BFAEF = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 11D79BB8244ED58F000BFAEF /* Build configuration list for PBXProject "Node" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 11D79BB4244ED58F000BFAEF;
+			productRefGroup = 11D79BBE244ED58F000BFAEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				11D79BBC244ED58F000BFAEF /* Node */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1175357124531434007B135F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\necho $(SRCROOT)/../build_nodeaddon_mac.sh\n$(SRCROOT)/../build_nodeaddon_mac.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11D79BB9244ED58F000BFAEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11D79BE9244F3425000BFAEF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		11D79BC2244ED58F000BFAEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		11D79BC3244ED58F000BFAEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		11D79BC5244ED58F000BFAEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7R34852FKA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		11D79BC6244ED58F000BFAEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7R34852FKA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11D79BB8244ED58F000BFAEF /* Build configuration list for PBXProject "Node" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11D79BC2244ED58F000BFAEF /* Debug */,
+				11D79BC3244ED58F000BFAEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11D79BC4244ED58F000BFAEF /* Build configuration list for PBXNativeTarget "Node" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11D79BC5244ED58F000BFAEF /* Debug */,
+				11D79BC6244ED58F000BFAEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 11D79BB5244ED58F000BFAEF /* Project object */;
+}
